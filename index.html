@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UMass Boston Youth Program Medical Forms</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .logo {
+        max-width: 150px;
+        margin-bottom: 10px;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #005a9c;
+      }
+      .translate-box {
+        background-color: #e7f3ff;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        border: 2px solid #005a9c;
+      }
+      .button {
+        display: inline-block;
+        background-color: #005a9c;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        margin: 10px 10px 10px 0;
+        cursor: pointer;
+        border: none;
+        font-size: 16px;
+      }
+      .print-button {
+        background-color: #4caf50;
+      }
+      .submit-button {
+        background-color: #ff9800;
+      }
+      .button:hover {
+        opacity: 0.9;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background-color: #f2f2f2;
+        width: 30%;
+      }
+      input[type="text"],
+      input[type="tel"],
+      input[type="date"],
+      textarea,
+      select {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      .form-section {
+        margin-bottom: 30px;
+        page-break-inside: avoid;
+      }
+      .section-header {
+        background-color: #f2f2f2;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 5px;
+      }
+      .signature-line {
+        border-top: 1px solid #000;
+        margin-top: 30px;
+        padding-top: 5px;
+      }
+      @media print {
+        .translate-box,
+        .no-print,
+        .goog-te-banner-frame,
+        .skiptranslate {
+          display: none !important;
+        }
+        body {
+          padding: 0;
+          font-size: 12pt;
+        }
+        .page-break {
+          page-break-after: always;
+        }
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"],
+        textarea {
+          border: 1px solid #ddd;
+        }
+        .button {
+          display: none;
+        }
+      }
+      #success-message {
+        display: none;
+        background-color: #dff0d8;
+        color: #3c763d;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+      }
+      .goog-te-combo {
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        min-width: 200px;
+      }
+      #google_translate_element {
+        margin: 15px 0;
+      }
+      .page-break {
+        margin: 40px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="translate-box no-print">
+      <h2>Translate this form</h2>
+      <p>
+        Select your preferred language from the dropdown menu below to translate
+        this form. An English option is provided so you can switch back anytime.
+      </p>
+      <div id="google_translate_element"></div>
+      <p>
+        <strong>Note:</strong> After translating, you can fill out the form,
+        print it, or submit it electronically.
+      </p>
+      <p>
+        <strong>Important:</strong> When you submit the form, your responses
+        will be saved in English and available in a printable format, regardless
+        of which language you used to complete the form.
+      </p>
+    </div>
+
+    <div id="success-message">
+      <h3>Form Submitted Successfully!</h3>
+      <p>
+        Thank you for submitting the UMass Boston Youth Program Medical Forms.
+        Your information has been received.
+      </p>
+    </div>
+
+    <form id="medical-form" onsubmit="return submitForm()">
+      <header>
+        <img src="./umb.png" alt="UMass Boston Logo" class="logo" />
+        <h1>UMass Boston Youth Program Participant Medical Forms 2024</h1>
+      </header>
+      <!-- ==================== Page 1 ==================== -->
+      <div class="form-section">
+        <table>
+          <tr>
+            <th>Name of Participant:</th>
+            <td><input type="text" name="participant_name" required /></td>
+          </tr>
+          <tr>
+            <th>Parent/Guardian:</th>
+            <td><input type="text" name="parent_guardian" required /></td>
+          </tr>
+          <tr>
+            <th>Address:</th>
+            <td><textarea name="address" rows="2" required></textarea></td>
+          </tr>
+          <tr>
+            <th>Phone:</th>
+            <td><input type="tel" name="phone" required /></td>
+          </tr>
+          <tr>
+            <th>Name of Medical Provider</th>
+            <td><input type="text" name="medical_provider" /></td>
+          </tr>
+          <tr>
+            <th>Address:</th>
+            <td><textarea name="provider_address" rows="2"></textarea></td>
+          </tr>
+          <tr>
+            <th>Phone:</th>
+            <td><input type="tel" name="provider_phone" /></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="page-break"></div>
+
+      <!-- ==================== Page 2 ==================== -->
+      <div class="form-section">
+        <h2 class="section-header">Youth Program Medical Requirements</h2>
+        <p>
+          <strong
+            >*All documentation must include your child's name and
+            birthdate*</strong
+          >
+        </p>
+
+        <h3>1. Application</h3>
+        <p>All forms must be signed by parents/guardian.</p>
+        <ol>
+          <li>
+            Consent to Treat Minor Patients, signed by parents/guardian (page 4)
+          </li>
+          <li>Health History (page 5)</li>
+          <li>Authorization, Waiver and Consent for OTC Medication (page 7)</li>
+        </ol>
+
+        <h3>2. Immunization records</h3>
+        <p>Submit one of the following:</p>
+        <ol>
+          <li>Certificate of Immunization (page 6) OR</li>
+          <li>
+            Immunization Form from medical provider or school record (this is
+            usually given to you at a yearly physical to give to the school
+            nurse)
+          </li>
+        </ol>
+
+        <h3>3. Required Vaccines</h3>
+        <p>
+          The following vaccines are required. If you need a Religious or
+          Medical Exemption for any required vaccine(s), please submit a letter
+          from the medical provider.
+        </p>
+        <ol>
+          <li>Td (Td, Tdap, Dtap)</li>
+          <li>MMR: Two (2) doses</li>
+          <li>
+            Varicella: Two (2) doses<br />
+            *If child had the Chickenpox (varicella), they may not have received
+            a full Varicella series (may have 1 or none). If that is the case,
+            you can submit documentation from your child's medical provider
+            stating they had chickenpox.
+          </li>
+          <li>Hep B: Three (3) doses</li>
+          <li>Polio: Three (3) or Four (4) doses, depending on type given</li>
+          <li>Meningococcal (MCV4) REQUIRED ONLY FOR OVERNIGHT PROGRAMS</li>
+        </ol>
+
+        <h3>4. Physical exam</h3>
+        <ol>
+          <li>
+            Must include wording to the effect of "student is cleared for full
+            participation in school and sports without restriction" **signed by
+            medical provider. (**Medical Provider refers to the child's
+            Pediatrician, aka "PCP" which may be a Doctor (MD, DO), Nurse
+            Practitioner (NP), or a Physician Assistant (PA)).
+          </li>
+          <li>Must be dated within the last 18 months</li>
+        </ol>
+      </div>
+
+      <div class="page-break"></div>
+
+      <!-- ==================== Page 3 ==================== -->
+      <div class="form-section">
+        <h2 class="section-header">
+          THESE SECTIONS ARE ONLY REQUIRED IF APPLICABLE TO THE PARTICIPANT
+        </h2>
+
+        <h3>5. Medications</h3>
+        <p>
+          If your child will be taking any medications while at their program,
+          Prescription or Over the Counter (OTC), you must submit orders from
+          medical provider. The medications must be sent to the program in their
+          original packaging with your child's name on them.
+        </p>
+        <ol>
+          <li>
+            If child needs medication that the nurse will store and administer
+            submit: "Authorization for Administration of Medication" form (page
+            8)
+          </li>
+          <li>
+            If child needs medication and can take it by themselves: submit:
+            "Authorization to Self-Administer Medication" form (page 9)
+          </li>
+        </ol>
+
+        <h3>6. Anaphylactic Allergy</h3>
+        <p>If your child has an anaphylactic allergy:</p>
+        <ol>
+          <li>
+            Submit an Anaphylactic Action Plan from your child's medical
+            provider which should include if the student can self-carry and
+            self-administer their epi pen.
+          </li>
+          <li>
+            Send child to program daily with Epinephrine Auto Injectors (aka
+            EpiPens) which should always be kept in pairs of two (2) and in the
+            original packaging from the pharmacy with the prescription attached.
+          </li>
+        </ol>
+
+        <h3>7. Asthma</h3>
+        <p>If your child has asthma:</p>
+        <ol>
+          <li>
+            Submit an "Asthma Action Plan," from your child's medical provider
+            which should specify if the student may self-carry and
+            self-administer the medications.
+          </li>
+        </ol>
+
+        <h3>8. Diabetes</h3>
+        <p>If your child has diabetes:</p>
+        <ol>
+          <li>
+            Submit a "Diabetes Care Plan" from their medical provider. UHS staff
+            will have a meeting (can be a phone call) with parent/guardian
+            before the start of the program to review care plan and create an
+            individualized program care plan for the student.
+          </li>
+          <li>
+            Plan to send your child every day to their program with all of their
+            necessary diabetes supplies as we do not have these supplies to give
+            them.
+          </li>
+        </ol>
+
+        <h3>9. Other chronic medical conditions</h3>
+        <p>If your child has any other medical problems:</p>
+        <ol>
+          <li>
+            Submit action plan, medication orders as appropriate and plan to
+            coordinate with our nursing staff to create an individual care plan
+            for your child while they are at our program.
+          </li>
+        </ol>
+      </div>
+
+      <div class="page-break"></div>
+
+      <!-- ==================== Page 4 ==================== -->
+      <div class="form-section">
+        <h2 class="section-header">CONSENT TO TREAT MINOR PATIENTS</h2>
+
+        <p>
+          Your child has been accepted to a youth program at the University of
+          Massachusetts Boston. University Health Services offers first aid to
+          minors who are participating in university sponsored youth programs.
+          Massachusetts law requires consent of a parent/legal guardian for
+          medical care of minors, including first aid. Please complete the
+          following consent form to allow University Health Services to provide
+          first aid to your child.
+        </p>
+
+        <p>
+          I,
+          <input
+            type="text"
+            name="parent_name_consent"
+            style="width: 300px"
+            required
+          />
+          (print name here), am the parent/legal guardian of
+          <input
+            type="text"
+            name="child_name_consent"
+            style="width: 300px"
+            required
+          />
+          (print name of participant), currently a minor, whose date of birth is
+          <input type="text" name="birth_month" style="width: 30px" required />/
+          <input type="text" name="birth_day" style="width: 30px" required />/
+          <input type="text" name="birth_year" style="width: 60px" required />.
+          I authorize the University of Massachusetts Boston Health Services to
+          provide first aid to the youth.
+        </p>
+
+        <p>
+          I understand that, should my minor participant need more extensive
+          medical care I will be notified by a healthcare provider through
+          University Health Services. I also understand that if the
+          injury/illness is determined to be life threatening or require
+          immediate medical attention beyond first aid, that an ambulance will
+          be called to take my child to the hospital and that the provider will
+          make every effort to contact me.
+        </p>
+
+        <p>
+          By signing this, I acknowledge that I have read and that I understand
+          this consent, and that any questions that I have prior to signing
+          could be answered by calling University Health Services at (617)
+          287-5660.
+        </p>
+
+        <div class="signature-line">
+          <input
+            type="text"
+            name="print_parent_name"
+            placeholder="Print Name of Parent/Guardian"
+            required
+          />
+        </div>
+
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+          "
+        >
+          <div style="width: 60%">
+            <div class="signature-line">
+              <input
+                type="text"
+                name="parent_signature"
+                placeholder="Signature of Parent/Guardian"
+                required
+              />
+            </div>
+          </div>
+          <div style="width: 30%">
+            <div class="signature-line">
+              <input type="date" name="signature_date" required />
+            </div>
+          </div>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+          "
+        >
+          <div style="width: 45%">
+            <div class="signature-line">
+              <input
+                type="tel"
+                name="best_phone_1"
+                placeholder="Best contact phone #1"
+                required
+              />
+            </div>
+          </div>
+          <div style="width: 45%">
+            <div class="signature-line">
+              <input
+                type="tel"
+                name="best_phone_2"
+                placeholder="Best contact phone #2"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+          "
+        >
+          <div style="width: 30%">
+            <div class="signature-line">
+              <input
+                type="text"
+                name="alternate_contact"
+                placeholder="Alternate Contact"
+              />
+            </div>
+          </div>
+          <div style="width: 30%">
+            <div class="signature-line">
+              <input
+                type="text"
+                name="alt_relationship"
+                placeholder="Relationship"
+              />
+            </div>
+          </div>
+          <div style="width: 30%">
+            <div class="signature-line">
+              <input type="tel" name="alt_phone" placeholder="Phone number" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-break"></div>
+
+      <!-- ==================== Page 5 ==================== -->
+      <div class="form-section">
+        <h2 class="section-header">HEALTH HISTORY</h2>
+
+        <p>
+          <strong
+            >AS A YOUTH PARTICIPANT, PARENT OR GUARDIAN I UNDERSTAND
+            THAT:</strong
+          >
+          If your child has a pre-existing medical condition, participation in
+          any strenuous activities or recreational time may not be recommended.
+          This information will be kept in strict confidence and will only be
+          shared with your permission. UMass Boston requests the information
+          below so that, in case of emergency, we will have accurate information
+          so that we can provide and/or seek appropriate treatment. You are
+          accountable for providing an accurate medical history. Final
+          determination about whether to participate is the responsibility of
+          UMass Boston's consulting health care provider. If you have any
+          medical issue that is not requested below, but which you think is
+          important, please include that information.
+        </p>
+
+        <p>(To be completed by Parent/Guardian)</p>
+
+        <p>
+          Has the participant had, or does the participant have, any of the
+          following? Check Yes or No.
+        </p>
+
+        <table>
+          <tr>
+            <th></th>
+            <th>YES</th>
+            <th>NO</th>
+            <th></th>
+            <th>YES</th>
+            <th>NO</th>
+          </tr>
+          <tr>
+            <td>Medication allergies:</td>
+            <td><input type="radio" name="med_allergies" value="yes" /></td>
+            <td>
+              <input type="radio" name="med_allergies" value="no" checked />
+            </td>
+            <td>Asthma</td>
+            <td><input type="radio" name="asthma" value="yes" /></td>
+            <td><input type="radio" name="asthma" value="no" checked /></td>
+          </tr>
+          <tr>
+            <td>Food allergies or special diet</td>
+            <td><input type="radio" name="food_allergies" value="yes" /></td>
+            <td>
+              <input type="radio" name="food_allergies" value="no" checked />
+            </td>
+            <td>Easy Bleeding</td>
+            <td><input type="radio" name="easy_bleeding" value="yes" /></td>
+            <td>
+              <input type="radio" name="easy_bleeding" value="no" checked />
+            </td>
+          </tr>
+          <tr>
+            <td>Seizures/epilepsy/fainting spells</td>
+            <td><input type="radio" name="seizures" value="yes" /></td>
+            <td><input type="radio" name="seizures" value="no" checked /></td>
+            <td>Emotional/psychiatric/behavioral issues</td>
+            <td><input type="radio" name="emotional_issues" value="yes" /></td>
+            <td>
+              <input type="radio" name="emotional_issues" value="no" checked />
+            </td>
+          </tr>
+          <tr>
+            <td>Diabetes</td>
+            <td><input type="radio" name="diabetes" value="yes" /></td>
+            <td><input type="radio" name="diabetes" value="no" checked /></td>
+            <td>Sickle cell trait or disease</td>
+            <td><input type="radio" name="sickle_cell" value="yes" /></td>
+            <td>
+              <input type="radio" name="sickle_cell" value="no" checked />
+            </td>
+          </tr>
+          <tr>
+            <td>Concussion or serious head injury</td>
+            <td><input type="radio" name="concussion" value="yes" /></td>
+            <td><input type="radio" name="concussion" value="no" checked /></td>
+            <td>High blood pressure</td>
+            <td><input type="radio" name="high_bp" value="yes" /></td>
+            <td><input type="radio" name="high_bp" value="no" checked /></td>
+          </tr>
+          <tr>
+            <td>Heat stroke/exhaustion</td>
+            <td><input type="radio" name="heat_stroke" value="yes" /></td>
+            <td>
+              <input type="radio" name="heat_stroke" value="no" checked />
+            </td>
+            <td>Heart disease/ heart defect</td>
+            <td><input type="radio" name="heart_disease" value="yes" /></td>
+            <td>
+              <input type="radio" name="heart_disease" value="no" checked />
+            </td>
+          </tr>
+          <tr>
+            <td>Contact lenses/glasses</td>
+            <td><input type="radio" name="contacts" value="yes" /></td>
+            <td><input type="radio" name="contacts" value="no" checked /></td>
+            <td>
+              Any limitations that restrict running, swimming, participating in
+              group recreational activities?
+            </td>
+            <td><input type="radio" name="limitations" value="yes" /></td>
+            <td>
+              <input type="radio" name="limitations" value="no" checked />
+            </td>
+          </tr>
+        </table>
+
+        <p>
+          If "Yes" to any above, or there is any additional information on the
+          youth's physical health please provide details here:
+        </p>
+        <textarea name="health_details" rows="3" style="width: 100%"></textarea>
+
+        <p>Will the youth need to take any medications during program hours?</p>
+        <div style="margin: 10px 0">
+          <input
+            type="radio"
+            name="medications_needed"
+            value="yes"
+            id="meds_yes"
+          />
+          <label for="meds_yes">YES</label>
+          <input
+            type="radio"
+            name="medications_needed"
+            value="no"
+            id="meds_no"
+            checked
+            style="margin-left: 20px"
+          />
+          <label for="meds_no">NO</label>
+        </div>
+
+        <p>
+          If yes, please submit the form "Authorization to Administer
+          Medications" (page 8) as well as "Authorization to Self-Administer
+          Medication" (page 9) if applicable.
+        </p>
+
+        <p>Is the participant pregnant? (females only)</p>
+        <div style="margin: 10px 0">
+          <input type="radio" name="pregnant" value="yes" id="preg_yes" />
+          <label for="preg_yes">YES</label>
+          <input
+            type="radio"
+            name="pregnant"
+            value="no"
+            id="preg_no"
+            checked
+            style="margin-left: 20px"
+          />
+          <label for="preg_no">NO</label>
+          <span style="margin-left: 20px"
+            >If YES, estimated due date: <input type="date" name="due_date"
+          /></span>
+        </div>
+
+        <div
+          style="
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+          "
+        >
+          <p>
+            <strong>PLEASE READ:</strong> As a participant, parent or guardian I
+            understand and acknowledge that my failure to disclose relevant
+            information may result in dismissal from a UMass Boston Youth
+            Program. By signing my name, I represent and warrant that I have
+            provided all materials and important information to UMass Boston
+            pertaining to my child's medical, mental and physical condition and
+            that it is accurate and complete. I agree to notify the program
+            nurse of any changes in my mental, physical, or medical condition
+            prior to my Child's scheduled program.
+          </p>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+          "
+        >
+          <div style="width: 60%">
+            <div class="signature-line">
+              <input
+                type="text"
+                name="health_parent_signature"
+                placeholder="Signature of Parent/Guardian"
+                required
+              />
+            </div>
+          </div>
+          <div style="width: 30%">
+            <div class="signature-line">
+              <input type="date" name="health_signature_date" required />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== Page 6: Certificate of Immunization ==================== -->
+      <div class="page-break"></div>
+      <div class="form-section">
+        <h2 class="section-header">CERTIFICATE OF IMMUNIZATION</h2>
+        <table>
+          <tr>
+            <th>Name:</th>
+            <td><input type="text" name="coi_name" /></td>
+            <th>Date of Birth:</th>
+            <td>
+              <input type="text" name="coi_dob" placeholder="MM/DD/YYYY" />
+            </td>
+            <th>Sex:</th>
+            <td>
+              <select name="coi_sex">
+                <option value="">Select</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="other">Other</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <th colspan="2">Vaccine</th>
+            <th colspan="2">Date/Vaccine Type</th>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <strong
+                >Hepatitis B<br />(e.g., HepB, HepB-Hib, DTaP-HepB-IPV)</strong
+              >
+            </td>
+            <td colspan="2">
+              1: <input type="text" name="hepb_1" style="width: 80px" /> 2:
+              <input type="text" name="hepb_2" style="width: 80px" /> 3:
+              <input type="text" name="hepb_3" style="width: 80px" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <strong
+                >Haemophilus influenzae type b<br />(e.g., Hib, HepB-Hib,
+                DTaP-Hib)</strong
+              >
+            </td>
+            <td colspan="2">
+              1: <input type="text" name="hib_1" style="width: 80px" /> 2:
+              <input type="text" name="hib_2" style="width: 80px" /> 3:
+              <input type="text" name="hib_3" style="width: 80px" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <strong
+                >Diphtheria, Tetanus, Pertussis<br />(e.g., DTaP, DT, DTaP-Hib,
+                DTaP-HepB-IPV, Td)</strong
+              >
+            </td>
+            <td colspan="2">
+              1: <input type="text" name="dtap_1" style="width: 80px" /> 2:
+              <input type="text" name="dtap_2" style="width: 80px" /> 3:
+              <input type="text" name="dtap_3" style="width: 80px" /><br />
+              4: <input type="text" name="dtap_4" style="width: 80px" /> 5:
+              <input type="text" name="dtap_5" style="width: 80px" /> 6:
+              <input type="text" name="dtap_6" style="width: 80px" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><strong>Measles, Mumps, Rubella (MMR)</strong></td>
+            <td colspan="2">
+              1: <input type="text" name="mmr_1" style="width: 80px" /> 2:
+              <input type="text" name="mmr_2" style="width: 80px" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><strong>Varicella (Var)</strong></td>
+            <td colspan="2">
+              1: <input type="text" name="var_1" style="width: 80px" /> 2:
+              <input type="text" name="var_2" style="width: 80px" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><strong>Hepatitis A (HepA)</strong></td>
+            <td colspan="2">
+              1: <input type="text" name="hepa_1" style="width: 80px" /> 2:
+              <input type="text" name="hepa_2" style="width: 80px" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <strong>Polio<br />(e.g., IPV, DTaP-HepB-IPV)</strong>
+            </td>
+            <td colspan="2">
+              1: <input type="text" name="polio_1" style="width: 80px" /> 2:
+              <input type="text" name="polio_2" style="width: 80px" /> 3:
+              <input type="text" name="polio_3" style="width: 80px" /> 4:
+              <input type="text" name="polio_4" style="width: 80px" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <strong>Pneumococcal Polysaccharide (PPV23)</strong>
+            </td>
+            <td colspan="2">
+              1: <input type="text" name="ppv23_1" style="width: 80px" /> 2:
+              <input type="text" name="ppv23_2" style="width: 80px" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><strong>Pneumococcal Conjugate (PCV7)</strong></td>
+            <td colspan="2">
+              1: <input type="text" name="pcv7_1" style="width: 80px" /> 2:
+              <input type="text" name="pcv7_2" style="width: 80px" /> 3:
+              <input type="text" name="pcv7_3" style="width: 80px" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <strong>Influenza (Inactivated or Live)</strong>
+            </td>
+            <td colspan="2">
+              1: <input type="text" name="flu_1" style="width: 80px" /> 2:
+              <input type="text" name="flu_2" style="width: 80px" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <strong>COVID 19 (optional)</strong><br />
+              2 doses (Moderna/Pfizer) OR 1 dose (J&amp;J) + at least one
+              booster
+            </td>
+            <td colspan="2">
+              1: <input type="text" name="covid_1" style="width: 80px" /> 2:
+              <input type="text" name="covid_2" style="width: 80px" /> 3
+              (booster):
+              <input type="text" name="covid_booster" style="width: 80px" />
+            </td>
+          </tr>
+        </table>
+
+        <table>
+          <tr>
+            <th colspan="4">
+              Serologic Proof of Immunity (If done, fill in below)
+            </th>
+          </tr>
+          <tr>
+            <td><strong>Test</strong></td>
+            <td><strong>Date of Test</strong></td>
+            <td><strong>Positive</strong></td>
+            <td><strong>Negative</strong></td>
+          </tr>
+          <tr>
+            <td>Measles</td>
+            <td>
+              <input
+                type="text"
+                name="serologic_measles_date"
+                style="width: 100px"
+              />
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="serologic_measles_result"
+                value="positive"
+              />
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="serologic_measles_result"
+                value="negative"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Mumps</td>
+            <td>
+              <input
+                type="text"
+                name="serologic_mumps_date"
+                style="width: 100px"
+              />
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="serologic_mumps_result"
+                value="positive"
+              />
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="serologic_mumps_result"
+                value="negative"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Rubella</td>
+            <td>
+              <input
+                type="text"
+                name="serologic_rubella_date"
+                style="width: 100px"
+              />
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="serologic_rubella_result"
+                value="positive"
+              />
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="serologic_rubella_result"
+                value="negative"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Varicella*</td>
+            <td>
+              <input
+                type="text"
+                name="serologic_varicella_date"
+                style="width: 100px"
+              />
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="serologic_varicella_result"
+                value="positive"
+              />
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="serologic_varicella_result"
+                value="negative"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Hepatitis B</td>
+            <td>
+              <input
+                type="text"
+                name="serologic_hepb_date"
+                style="width: 100px"
+              />
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="serologic_hepb_result"
+                value="positive"
+              />
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="serologic_hepb_result"
+                value="negative"
+              />
+            </td>
+          </tr>
+        </table>
+        <p>* Must also check Chickenpox History box if applicable.</p>
+
+        <p>
+          <input type="checkbox" name="chickenpox_history" /> Check the box if
+          this person has a physician-certified reliable history of
+          chickenpox.<br />
+          Date of chickenpox:
+          <input type="text" name="chickenpox_date" style="width: 120px" />
+        </p>
+
+        <p>
+          I certify that this immunization information was transferred from the
+          above-named individual's medical records.
+        </p>
+        <table>
+          <tr>
+            <th>Name and Title of Licensed Provider (print):</th>
+            <td><input type="text" name="provider_cert_name" /></td>
+          </tr>
+          <tr>
+            <th>Date:</th>
+            <td><input type="date" name="provider_cert_date" /></td>
+          </tr>
+          <tr>
+            <th>Signature of Licensed Provider:</th>
+            <td><input type="text" name="provider_cert_signature" /></td>
+          </tr>
+          <tr>
+            <th>Address:</th>
+            <td><input type="text" name="provider_cert_address" /></td>
+          </tr>
+          <tr>
+            <th>Phone:</th>
+            <td><input type="tel" name="provider_cert_phone" /></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- ==================== Page 7 ==================== -->
+      <div class="page-break"></div>
+      <div class="form-section">
+        <h2 class="section-header">
+          PARENT/GUARDIAN AUTHORIZATION, WAIVER AND CONSENT FOR OVER-THE-COUNTER
+          MEDICATION
+        </h2>
+
+        <p>
+          Over-the-Counter (OTC) Medication may at times need to be
+          administered. All of the following medications will be administered as
+          necessary unless you indicate below those meds you do
+          <strong>not</strong> want your child to receive.
+        </p>
+
+        <p>
+          I hereby request that the following medications
+          <strong>NOT</strong> be given to
+          <input type="text" name="med_participant_name" style="width: 300px" />
+        </p>
+
+        <p>You may not dispense those checked except in an emergency.</p>
+
+        <table>
+          <tr>
+            <td>
+              <input type="checkbox" name="no_tylenol" /> Acetaminophen
+              (Tylenol)
+            </td>
+            <td>
+              <input type="checkbox" name="no_ibuprofen" /> Ibuprofen
+              (advil/motrin)
+            </td>
+            <td><input type="checkbox" name="no_antacid" /> Antacid</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="no_benadryl" />
+              Benadryl/Antihistamine
+            </td>
+            <td>
+              <input type="checkbox" name="no_antibiotic" /> Triple Antibiotic
+              Ointment
+            </td>
+            <td><input type="checkbox" name="no_cough" /> Cough Drops</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="no_calamine" /> Calamine Lotion
+            </td>
+            <td>
+              <input type="checkbox" name="no_hydrocortisone" /> Hydrocortisone
+              Ointment
+            </td>
+            <td><input type="checkbox" name="no_sunblock" /> Sun Block</td>
+          </tr>
+        </table>
+
+        <p>
+          I understand that such administration will be done under the
+          supervision of medical personnel. I authorize the administration of
+          over-the-counter medications to my child as indicated above.
+        </p>
+
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+          "
+        >
+          <div style="width: 60%">
+            <div class="signature-line">
+              <input
+                type="text"
+                name="otc_parent_signature"
+                placeholder="Signature of Parent/Guardian"
+                required
+              />
+            </div>
+          </div>
+          <div style="width: 30%">
+            <div class="signature-line">
+              <input type="date" name="otc_signature_date" required />
+            </div>
+          </div>
+        </div>
+
+        <div
+          style="
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+          "
+        >
+          <p>
+            <strong>Please note</strong> that the following medications may be
+            administered to summer youth participants following emergency
+            medication specific protocol regardless of parental consent. In
+            addition, 911 will be called as medically appropriate which may mean
+            they will be transported to a local emergency room.
+          </p>
+
+          <table style="width: 50%; margin: 0 auto">
+            <tr>
+              <td>Albuterol Inhaler</td>
+            </tr>
+            <tr>
+              <td>Albuterol Sulfate Inhalation Solution</td>
+            </tr>
+            <tr>
+              <td>Benadryl</td>
+            </tr>
+            <tr>
+              <td>Epi-Pen Jr. or Epi-Pen</td>
+            </tr>
+          </table>
+
+          <p>
+            Any condition which is associated with fever, significant
+            inflammation, and/or does not respond to the above outlined
+            treatment will be followed-up by a consultation with the youth's
+            parents.
+          </p>
+        </div>
+      </div>
+
+      <!-- ==================== Page 8: Authorization to Administer Medication ==================== -->
+      <div class="page-break"></div>
+      <div class="form-section">
+        <h2 class="section-header">AUTHORIZATION TO ADMINISTER MEDICATION</h2>
+        <p><strong>ONLY REQUIRED IF APPLICABLE TO PARTICIPANT</strong></p>
+        <p>
+          Name of licensed prescriber and title (please print):
+          <input type="text" name="admin_prescriber_name" />
+        </p>
+        <p>
+          Signature of Parent/Guardian:
+          <input type="text" name="admin_parent_signature" />
+          Date: <input type="date" name="admin_parent_date" />
+        </p>
+        <p>
+          <em
+            >*For all Prescription and Over the Counter Medications taken on a
+            regular basis*</em
+          >
+        </p>
+        <p>Please provide separate sheets for each medication.</p>
+        <h3>A.) TO BE COMPLETED BY PARENT OR GUARDIAN:</h3>
+        <p>
+          I request that my child receive the medication as prescribed below by
+          our licensed healthcare provider. The medication is to be furnished by
+          me in the properly labeled original container from the pharmacy. I
+          understand that the Registered Nurse or other designated healthcare
+          supervisor will administer the medication.
+        </p>
+        <h3>B.) TO BE COMPLETED BY THE LICENSED HEALTHCARE PROVIDER:</h3>
+        <p>Please provide separate sheets for each medication.</p>
+        <p>
+          I request that my patient, as listed below, receive the following
+          medication:
+        </p>
+        <p>
+          Name of participant:
+          <input type="text" name="admin_patient_name" /> Date of Birth:
+          <input
+            type="text"
+            name="admin_patient_dob"
+            placeholder="MM/DD/YYYY"
+          />
+        </p>
+        <p>Diagnosis: <input type="text" name="admin_diagnosis" /></p>
+        <p>Name of medication: <input type="text" name="admin_medication" /></p>
+        <p>
+          Prescribed dosage, frequency, and route of administration:
+          <input type="text" name="admin_dosage" style="width: 80%" />
+        </p>
+        <p>
+          Time to be taken during program hours:
+          <input type="text" name="admin_time" /> Duration of treatment:
+          <input type="text" name="admin_duration" />
+        </p>
+        <p>
+          Possible side effects and adverse reactions (if any):
+          <input type="text" name="admin_side_effects" style="width: 80%" />
+        </p>
+        <p>
+          Other recommendations:
+          <input type="text" name="admin_recommendations" style="width: 80%" />
+        </p>
+        <p>
+          Name of licensed prescriber and title (please print):
+          <input type="text" name="admin_prescriber_details" />
+        </p>
+        <p>
+          Name/Title, Office Phone, Street Address, Apt. #, City, State, Zip
+          Code:
+          <input
+            type="text"
+            name="admin_prescriber_contact"
+            style="width: 90%"
+          />
+        </p>
+        <p>
+          Signature of licensed prescriber:
+          <input type="text" name="admin_prescriber_signature" /> Date:
+          <input type="date" name="admin_prescriber_date" />
+        </p>
+      </div>
+
+      <!-- ==================== Page 9: Authorization for Self-Administration of Medication ==================== -->
+      <div class="page-break"></div>
+      <div class="form-section">
+        <h2 class="section-header">
+          AUTHORIZATION FOR SELF-ADMINISTRATION OF MEDICATION
+        </h2>
+        <p><strong>ONLY REQUIRED IF APPLICABLE TO PARTICIPANT</strong></p>
+        <p>
+          <em
+            >*For all prescription and over-the-counter medications that will be
+            taken independently by participant*</em
+          >
+        </p>
+        <p>Please provide separate sheets for each medication.</p>
+        <p>
+          Participant Name:
+          <input type="text" name="selfadmin_participant_name" />
+        </p>
+        <p>Address: <input type="text" name="selfadmin_address" /></p>
+        <p>
+          Date of Birth:
+          <input type="text" name="selfadmin_dob" placeholder="MM/DD/YYYY" />
+        </p>
+        <p>
+          Program Name &amp; Location:
+          <input type="text" name="selfadmin_program" />
+        </p>
+        <p>
+          This form must be completed fully in order for the student identified
+          above to self-administer prescription medication during the program
+          (including inhalers, insulin, EpiPens).
+        </p>
+        <p>
+          A separate Authorization for Self-Administration of Prescription
+          Medication must be completed for each medication to be
+          self-administered.
+        </p>
+        <p>
+          Self-administration of medication requires the written authorizations
+          (below) of a licensed health care professional and the participant's
+          parent or legal guardian.
+        </p>
+        <h3>
+          AUTHORIZATION FROM PRESCRIBER FOR SELF-ADMINISTRATION OF MEDICATION
+        </h3>
+        <p>
+          Medication name: <input type="text" name="selfadmin_medication" />
+        </p>
+        <p>Dosages: <input type="text" name="selfadmin_dosages" /></p>
+        <p>
+          Condition(s) for which medication is being administered:
+          <input type="text" name="selfadmin_conditions" />
+        </p>
+        <p>
+          Specific directions (e.g., on empty stomach, with water):
+          <input type="text" name="selfadmin_directions" style="width: 80%" />
+        </p>
+        <p>
+          Time/frequency of administration:
+          <input type="text" name="selfadmin_time" />
+        </p>
+        <p>
+          If PRN, frequency:
+          <input type="text" name="selfadmin_prn_frequency" />
+        </p>
+        <p>
+          If PRN, for what symptom(s):
+          <input type="text" name="selfadmin_prn_symptoms" />
+        </p>
+        <p>
+          Relevant side effect(s):
+          <input type="text" name="selfadmin_side_effects" style="width: 80%" />
+        </p>
+        <p>
+          Dates medication shall be administered from:
+          <input type="text" name="selfadmin_dates" style="width: 80%" />
+        </p>
+        <p>
+          Special storage requirements:
+          <input type="text" name="selfadmin_storage" style="width: 80%" />
+        </p>
+        <p>
+          Is Participant capable of self-administering this medication:
+          <select name="selfadmin_capable">
+            <option value="">Select</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </p>
+        <p>
+          I hereby affirm that the participant has been instructed in the proper
+          self-administration of the above-described medication.
+        </p>
+        <p>
+          Name/Title, Office Phone, Street Address, Apt. #, City, State, Zip
+          Code:
+          <input
+            type="text"
+            name="selfadmin_prescriber_contact"
+            style="width: 90%"
+          />
+        </p>
+        <p>
+          Signature of licensed prescriber:
+          <input type="text" name="selfadmin_prescriber_signature" /> Date:
+          <input type="date" name="selfadmin_prescriber_date" />
+        </p>
+        <p>
+          Signature of Parent/Guardian:
+          <input type="text" name="admin_parent_signature" /> Date:
+          <input type="date" name="admin_parent_signature" />
+        </p>
+      </div>
+
+      <div
+        class="form-buttons no-print"
+        style="margin-top: 30px; text-align: center"
+      >
+        <button type="submit" class="button submit-button">Submit Form</button>
+      </div>
+    </form>
+
+    <!-- Scripts for functionality -->
+    <script type="text/javascript">
+      // Initialize Google Translate with English included
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,ar,zh-CN,fr,de,hi,it,ja,ko,pt,ru,es,vi",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false,
+          },
+          "google_translate_element"
+        );
+      }
+
+      // Form submission function
+      function submitForm() {
+        // Save all form data to local storage
+        const form = document.getElementById("medical-form");
+        const formData = {};
+
+        // Get all input elements
+        const inputs = form.querySelectorAll("input, textarea, select");
+
+        // Iterate through inputs and save their values
+        inputs.forEach((input) => {
+          // Handle radio buttons and checkboxes specially
+          if (input.type === "radio") {
+            if (input.checked) {
+              formData[input.name] = input.value;
+            }
+          } else if (input.type === "checkbox") {
+            formData[input.name] = input.checked;
+          } else {
+            // For regular input fields, textareas, and selects
+            formData[input.name] = input.value;
+          }
+        });
+
+        // Save to localStorage
+        localStorage.setItem("medicalFormData", JSON.stringify(formData));
+
+        // Redirect to the summary page
+        window.location.href = "summary.html";
+
+        return false; // Prevent actual submission
+      }
+    </script>
+
+    <!-- Google Translate Script (using https for secure loading) -->
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </body>
+</html>
